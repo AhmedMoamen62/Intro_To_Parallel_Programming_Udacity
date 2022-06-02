@@ -9,6 +9,9 @@
 
 file( GLOB  hdr *.hpp *.h )
 
-SET (HW6_files student_func.cu HW6.cu main.cpp loadSaveImage.cpp reference_calc.cpp compare.cpp)
+SET (HW5_files main.cu student.cu reference_calc.cpp)
 
-CUDA_ADD_EXECUTABLE(HW6 ${HW6_files} ${hdr})
+CUDA_ADD_EXECUTABLE(ProblemSet5_OptimizedHistogram ${HW5_files} ${hdr})
+
+
+

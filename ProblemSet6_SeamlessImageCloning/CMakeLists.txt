@@ -8,7 +8,7 @@
 # collect source files
 
 file( GLOB  hdr *.hpp *.h )
-file( GLOB  cu  *.cu)
-SET (HW1_files main.cpp reference_calc.cpp compare.cpp)
 
-CUDA_ADD_EXECUTABLE(HW1 ${HW1_files} ${hdr} ${cu})
+SET (HW6_files student_func.cu HW6.cu main.cpp loadSaveImage.cpp reference_calc.cpp compare.cpp)
+
+CUDA_ADD_EXECUTABLE(ProblemSet6_SeamlessImageCloning ${HW6_files} ${hdr})
