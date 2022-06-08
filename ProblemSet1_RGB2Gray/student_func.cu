@@ -31,6 +31,7 @@
 //You should fill in the kernel as well as set the block and grid sizes
 //so that the entire image is processed.
 
+#include <device_launch_parameters.h>
 #include "utils.h"
 
 __global__
@@ -74,5 +75,4 @@ void your_rgba_to_greyscale(const uchar4* const h_rgbaImage, uchar4* const d_rgb
     rgba_to_greyscale<<<gridSize, blockSize>>>(d_rgbaImage, d_greyImage, numRows, numCols);
 
     cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
-
 }
